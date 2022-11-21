@@ -2,9 +2,6 @@
 #include <iomanip>
 #include <iostream>
 inline void SrGeom(double* arr, int& longarr) {
-  std::ios_base::sync_with_stdio(false);
-  std::cin.tie(NULL);
-  std::cout.tie(NULL);
   for (int i = 1; i < longarr; i++) {
     double srgeom = pow(arr[i], (1.0 / (i + 1.0)));
     double srgeom1 = pow(arr[i - 1], (i * 1.0) / (i + 1.0));
