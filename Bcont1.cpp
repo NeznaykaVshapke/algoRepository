@@ -1,10 +1,10 @@
 #include <iostream>
 
 int main() {
-  int long_arr;
+  size_t long_arr;
   std::cin >> long_arr;
   int* arr = new int[long_arr];
-  for (int i = 0; i < long_arr; ++i) {
+  for (size_t i = 0; i < long_arr; ++i) {
     std::cin >> arr[i];
   }
   int right = long_arr - 1;
