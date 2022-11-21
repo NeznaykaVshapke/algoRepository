@@ -1,5 +1,4 @@
 #include <iostream>
-
 int main() {
   size_t long_arr;
   std::cin >> long_arr;
