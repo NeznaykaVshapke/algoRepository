@@ -23,8 +23,8 @@ int main() {
   std::cin >> long_arr;
   int* arr = new int[long_arr];
   Input(arr, long_arr);
-  int ans;
-  ans = CyclicShift(arr, long_arr);
+  int answer;
+  answer = CyclicShift(arr, long_arr);
   std::cout << ans;
   delete[] arr;
   return 0;
