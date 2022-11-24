@@ -1,7 +1,7 @@
 #include <iostream>
 #include <vector>
-const uint64_t kArr1 = (static_cast<uint64_t>(1) << 9) - 1;
 inline void LSDSort(std::vector<uint64_t>& array, int digit) {
+  const uint64_t kArr1 = (static_cast<uint64_t>(1) << 9) - 1;
   const uint64_t kArr2 = static_cast<uint64_t>(1) << ((digit - 1) * 8);
   size_t size_array = array.size();
   std::vector<uint64_t> cnt(kArr1 + 1, 0);
