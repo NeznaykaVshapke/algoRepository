@@ -1,12 +1,10 @@
 #include <iostream>
-
-int main() {
-  size_t long_arr;
-  std::cin >> long_arr;
-  int* arr = new int[long_arr];
+void Input(int* arr, size_t long_arr) {
   for (size_t i = 0; i < long_arr; ++i) {
     std::cin >> arr[i];
   }
+}
+int CyclicShift(int* arr, size_t long_arr) {
   int right = long_arr - 1;
   int left = -1;
   const int kLast = arr[long_arr - 1];
@@ -18,7 +16,16 @@ int main() {
       right = centre;
     }
   }
-  std::cout << right;
+  return right;
+}
+int main() {
+  size_t long_arr;
+  std::cin >> long_arr;
+  int* arr = new int[long_arr];
+  Input(arr, long_arr);
+  int ans;
+  ans = CyclicShift(arr, long_arr);
+  std::cout << ans;
   delete[] arr;
   return 0;
 }
