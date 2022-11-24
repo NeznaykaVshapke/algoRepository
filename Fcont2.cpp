@@ -18,19 +18,28 @@ inline void LSDSort(std::vector<uint64_t>& array, int digit) {
   for (size_t i = 1; i < summ.size(); ++i) {
     summ[i] = cnt[i - 1] + summ[i - 1];
   }
-  for (size_t i = 0; i < size_massiv; ++i) {
+  for (size_t i = 0; i < size_array; ++i) {
     t = array2[i] & delta;
     t /= kArr2;
     array[summ[t]++] = array2[i];
   }
 }
 
-inline void LSDSort(std::vector<uint64_t>& array) {
+inline void LSD(std::vector<uint64_t>& array) {
   for (size_t i = 1; i <= 8; ++i) {
     LSDSort(array, i);
   }
 }
-
+void Input(size_t n, std::vector<uint64_t>& array) {
+  for (size_t i = 0; i < n; i++) {
+    std::cin >> array[i];
+  }
+}
+void Output(std::vector<uint64_t> array) {
+  for (auto x : array) {
+    std::cout << x << "\n";
+  }
+}
 int main() {
   std::ios_base::sync_with_stdio(false);
   std::cin.tie(NULL);
@@ -38,12 +47,8 @@ int main() {
   size_t n;
   std::cin >> n;
   std::vector<uint64_t> array(n);
-  for (size_t i = 0; i < n; i++) {
-    std::cin >> array[i];
-  }
+  Input(n, array);
   LSD(array);
-  for (auto x : array) {
-    std::cout << x << "\n";
-  }
+  Output(array);
   return 0;
 }
