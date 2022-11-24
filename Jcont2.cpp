@@ -9,7 +9,7 @@ class MinHeap {
 
   void Insert(T);
 
-  const bool Empty() { return size_ == 0; }
+  bool Empty() const { return size_ == 0; }
 
  private:
   void SiftUp(size_t);
