@@ -1,5 +1,5 @@
 #include <iostream>
-bool BinarySearch(const size_t* begin, const size_t* end, int target) {
+bool BinarySearch(const int* begin, const int* end, int target) {
   size_t left = 0;
   size_t right = end - begin;
   while (right >= left + 2) {
